@@ -1,0 +1,19 @@
+from  flask  import  Flask , render_template , request
+
+app  =  Flask ( __name__ )
+
+
+@ app . маршрут ( "/" )
+def  index ():
+    вернуть  render_template ( "index.html" )
+
+
+@ app . route ( "/ fun" , methods = [ "GET" ])
+def  kankul ():
+    a = int ( request . args . get ( "a" ))
+    b = int ( request . args . get ( "b" ))
+    сим = а + Ь
+    riz = a - b
+    доб = а * б
+    час = а / б
+    Возвращение  render_template ( "index.html" , = а , Ь = Ь , SYM = SYM , Ризы = Ризы , DOB = DOB , Чес = Чес )
